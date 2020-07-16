@@ -23,9 +23,24 @@ class CircusApi {
 	}
 	handleSuccessfulResponse(response) {
 		console.log('got a response', response);
+
+		const value = response.data;
+
+		const event = new CustomEvent('got-data', { detail: value });
+		document.querySelector('body').dispatchEvent(event);
 	}
 
 	handleError(error) {
 		console.log('got an error', error);
+
+		const event = new CustomEvent('got-error', { detail: error });
+		document.querySelector('body').dispatchEvent(event);
+	}
+
+	handleStatus(status) {
+		console.log('Status is', status);
+
+		const event = new CustomEvent('got-status', { detail: status });
+		document.querySelector('body').dispatchEvent(event);
 	}
 }

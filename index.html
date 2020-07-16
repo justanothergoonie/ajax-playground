@@ -14,8 +14,20 @@
 		<form action="" id="form">
 			<input type="text" name="key" />
 			<button type="submit" name="get">GET VALUE</button>
+
+			<p name="result"></p>
+			<p name="message"></p>
+			<p class="error" name="error"></p>
+		</form>
+		<form action="">
+			<input type="text" name="lock" />
+			<input type="text" name="lock-value" />
+			<button type="submit" name="send">ADD VALUE</button>
+
+			<p name="success"></p>
 		</form>
 		<script src="node_modules/axios/dist/axios.min.js"></script>
 		<script src="dist/js/circus-api.js"></script>
+		<script src="dist/js/main.js"></script>
 	</body>
 </html>

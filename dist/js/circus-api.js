@@ -37,14 +37,32 @@ var CircusApi = /*#__PURE__*/function () {
     key: "handleSuccessfulResponse",
     value: function handleSuccessfulResponse(response) {
       console.log('got a response', response);
+      var value = response.data;
+      var event = new CustomEvent('got-data', {
+        detail: value
+      });
+      document.querySelector('body').dispatchEvent(event);
     }
   }, {
     key: "handleError",
     value: function handleError(error) {
       console.log('got an error', error);
+      var event = new CustomEvent('got-error', {
+        detail: error
+      });
+      document.querySelector('body').dispatchEvent(event);
+    }
+  }, {
+    key: "handleStatus",
+    value: function handleStatus(status) {
+      console.log('Status is', status);
+      var event = new CustomEvent('got-status', {
+        detail: status
+      });
+      document.querySelector('body').dispatchEvent(event);
     }
   }]);
 
   return CircusApi;
 }();
-//# sourceMappingURL=main.js.map
+//# sourceMappingURL=circus-api.js.map
