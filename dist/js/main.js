@@ -8,8 +8,7 @@ var successEl = document.querySelector('[name="success"]');
 document.querySelector('body').addEventListener('got-data', function (event) {
   console.log('got some data to show', event);
   messageEl.textContent = event.detail.message;
-  resultEl.textContent = event.detail.data.value;
-  successEl.textContent = event.detail.status;
+  resultEl.textContent = event.detail.data.value; // successEl.textContent = event.detail.status;
 });
 document.querySelector('body').addEventListener('got-error', function (event) {
   console.log('got an error to show', event.detail);
