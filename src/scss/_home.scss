@@ -1,0 +1,11 @@
+form {
+	@include flex-center;
+	flex-direction: column;
+	// width: 25%;
+	button {
+		width: 153px;
+	}
+	.error {
+		color: red;
+	}
+}

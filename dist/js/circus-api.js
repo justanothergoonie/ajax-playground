@@ -27,7 +27,7 @@ var CircusApi = /*#__PURE__*/function () {
   }, {
     key: "saveData",
     value: function saveData(key, value) {
-      console.log('saving some data' + key + ' = ' + value);
+      console.log('saving some data ' + key + ' = ' + value);
       axios.post("".concat(this.API_URL, "/").concat(key), {
         type: 'string',
         value: value

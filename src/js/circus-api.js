@@ -14,7 +14,7 @@ class CircusApi {
 	}
 
 	saveData(key, value) {
-		console.log('saving some data' + key + ' = ' + value);
+		console.log('saving some data ' + key + ' = ' + value);
 
 		axios.post(`${this.API_URL}/${key}`, {
 			type: 'string',

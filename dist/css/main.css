@@ -134,4 +134,20 @@ table {
 	border-spacing: 0;
 }
 
+form {
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+form button {
+	width: 153px;
+}
+
+form .error {
+	color: red;
+}
+
 /*# sourceMappingURL=main.css.map */

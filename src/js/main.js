@@ -10,7 +10,6 @@ document.querySelector('body').addEventListener('got-data', (event) => {
 
 	messageEl.textContent = event.detail.message;
 	resultEl.textContent = event.detail.data.value;
-	// successEl.textContent = event.detail.status;
 });
 
 document.querySelector('body').addEventListener('got-error', (event) => {
@@ -20,9 +19,9 @@ document.querySelector('body').addEventListener('got-error', (event) => {
 });
 
 document.querySelector('body').addEventListener('got-status', (event) => {
-	console.log('got an error to show', event);
+	console.log('got the status', event.data.data);
 
-	successEl.textContent = event.detail.status;
+	successEl.textContent = data.data.status;
 });
 
 const getBtn = document.querySelector('[name="get"]');

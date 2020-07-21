@@ -8,15 +8,15 @@ var successEl = document.querySelector('[name="success"]');
 document.querySelector('body').addEventListener('got-data', function (event) {
   console.log('got some data to show', event);
   messageEl.textContent = event.detail.message;
-  resultEl.textContent = event.detail.data.value; // successEl.textContent = event.detail.status;
+  resultEl.textContent = event.detail.data.value;
 });
 document.querySelector('body').addEventListener('got-error', function (event) {
   console.log('got an error to show', event.detail);
   errorEl.textContent = event.detail;
 });
 document.querySelector('body').addEventListener('got-status', function (event) {
-  console.log('got an error to show', event);
-  successEl.textContent = event.detail.status;
+  console.log('got the status', event.data.data);
+  successEl.textContent = data.data.status;
 });
 var getBtn = document.querySelector('[name="get"]');
 getBtn.addEventListener('click', function (event) {
